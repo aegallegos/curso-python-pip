@@ -1,0 +1,12 @@
+services:
+  web-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-server
+    ports:
+      - "80:80"
+    volumes:
+      - .:/web-server
+    environment:
+      - ENV=development
