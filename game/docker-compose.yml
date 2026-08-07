@@ -1,0 +1,10 @@
+services:
+  game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: game
+    volumes:
+      - .:/game
+    environment:
+      - ENV=development
